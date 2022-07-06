@@ -1,5 +1,10 @@
 # homework
 
+## Project Hosting
+```
+https://homework-ui-module.web.app/
+```
+
 ## Project setup
 ```
 yarn install
