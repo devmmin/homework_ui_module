@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <h1>UI 모듈 제작</h1>
-    <section class="card-vertical">
+    <h1 class="layout">UI 모듈 제작</h1>
+    <section class="layout card-vertical">
       <h2>과제 1. 카드 UI - 세로형</h2>
       <ul>
         <li v-for="(card, index) in cardItemList" :key="index">
@@ -18,7 +18,7 @@
       </ul>
     </section>
     <br />
-    <section class="card-horizontal">
+    <section class="layout card-horizontal">
       <h2>과제 1. 카드 UI - 가로형</h2>
       <ul>
         <li v-for="(card, index) in cardItemRowList" :key="index">
@@ -33,7 +33,7 @@
       </ul>
     </section>
     <br />
-    <section class="textarea-list">
+    <section class="layout textarea">
       <h2>과제 2. 입력 폼 UI</h2>
       <ul>
         <li>
@@ -143,59 +143,52 @@ export default {
   font-family: "Nanum Barun Gothic", sans-serif;
   font-size: 12px;
   padding: 30px;
-  h1 {
-    width: 1056px;
+  .layout {
     margin: 0 auto;
-  }
-  section {
-    margin: 0 auto;
-  }
-  .card-vertical {
     width: 1056px;
     @media (max-width: 720px) {
       width: 100%;
     }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      li {
-        width: 20%;
-        padding-left: 10px;
-        padding-top: 10px;
-        @media (max-width: 720px) {
+    &.card-vertical {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 20%;
+          padding-left: 10px;
+          padding-top: 10px;
+
+          @media (max-width: 720px) {
+            width: 50%;
+          }
+        }
+      }
+    }
+    &.card-horizontal {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
           width: 50%;
+          padding-left: 10px;
+          padding-top: 10px;
+
+          @media (max-width: 720px) {
+            width: 100%;
+          }
         }
       }
     }
-  }
-  .card-horizontal {
-    width: 1056px;
-    @media (max-width: 720px) {
-      width: 100%;
-    }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      li {
-        width: 50%;
-        padding-left: 10px;
-        padding-top: 10px;
-        @media (max-width: 720px) {
-          width: 100%;
+    &.textarea {
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          padding: 15px;
         }
-      }
-    }
-  }
-  .textarea-list {
-    width: 1056px;
-    @media (max-width: 720px) {
-      width: 100%;
-    }
-    ul {
-      display: flex;
-      flex-direction: column;
-      li {
-        padding: 15px;
       }
     }
   }

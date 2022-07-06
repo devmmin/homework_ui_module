@@ -1,3 +1,22 @@
 @import "../scss/reset.scss";
 @import "../scss/variables.scss";
 
+.line-clamp-2 {
+    line-height: 20px;
+    display: -webkit-box !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 40px;
+}
+
+.line-clamp-3 {
+    line-height: 20px;
+    display: -webkit-box !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-height: 60px;
+}
