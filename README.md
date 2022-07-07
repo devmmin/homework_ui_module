@@ -1,5 +1,13 @@
 # homework
 
+## 개발 환경
+```
+node
+v17.0.1
+npm
+8.1.0
+```
+
 ## Project Hosting
 ```
 https://homework-ui-module.web.app/
